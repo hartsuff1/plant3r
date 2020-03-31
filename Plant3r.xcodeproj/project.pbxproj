@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		372896F024338A3500F91BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372896EE24338A3500F91BC7 /* Main.storyboard */; };
 		372896F224338A3700F91BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372896F124338A3700F91BC7 /* Assets.xcassets */; };
 		372896F524338A3700F91BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372896F324338A3700F91BC7 /* LaunchScreen.storyboard */; };
+		374C775E2433BD7100639C26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374C775D2433BD7100639C26 /* GoogleService-Info.plist */; };
+		80AF0D294CD4DBA964454869 /* libPods-Plant3r.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD702238B4419884A7908C6 /* libPods-Plant3r.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		372896F124338A3700F91BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372896F424338A3700F91BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372896F624338A3700F91BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		374C775D2433BD7100639C26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD702238B4419884A7908C6 /* libPods-Plant3r.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Plant3r.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5F6B07C63258FF86A91BCB3 /* Pods-Plant3r.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant3r.release.xcconfig"; path = "Target Support Files/Pods-Plant3r/Pods-Plant3r.release.xcconfig"; sourceTree = "<group>"; };
+		CEC4701746521BB76673C585 /* Pods-Plant3r.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant3r.debug.xcconfig"; path = "Target Support Files/Pods-Plant3r/Pods-Plant3r.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AF0D294CD4DBA964454869 /* libPods-Plant3r.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A220A88652AB62D25775112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BD702238B4419884A7908C6 /* libPods-Plant3r.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		372896DC24338A3400F91BC7 = {
 			isa = PBXGroup;
 			children = (
 				372896E724338A3500F91BC7 /* Plant3r */,
 				372896E624338A3500F91BC7 /* Products */,
+				89E73BA45E0B2903D0027C49 /* Pods */,
+				0A220A88652AB62D25775112 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +79,19 @@
 				372896EE24338A3500F91BC7 /* Main.storyboard */,
 				372896F124338A3700F91BC7 /* Assets.xcassets */,
 				372896F324338A3700F91BC7 /* LaunchScreen.storyboard */,
+				374C775D2433BD7100639C26 /* GoogleService-Info.plist */,
 				372896F624338A3700F91BC7 /* Info.plist */,
 			);
 			path = Plant3r;
+			sourceTree = "<group>";
+		};
+		89E73BA45E0B2903D0027C49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4701746521BB76673C585 /* Pods-Plant3r.debug.xcconfig */,
+				C5F6B07C63258FF86A91BCB3 /* Pods-Plant3r.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 372896F924338A3700F91BC7 /* Build configuration list for PBXNativeTarget "Plant3r" */;
 			buildPhases = (
+				2ED614C481FD27E6967D75C8 /* [CP] Check Pods Manifest.lock */,
 				372896E124338A3400F91BC7 /* Sources */,
 				372896E224338A3400F91BC7 /* Frameworks */,
 				372896E324338A3400F91BC7 /* Resources */,
+				8DFE33B51F20E32DCD50DBF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				372896F524338A3700F91BC7 /* LaunchScreen.storyboard in Resources */,
+				374C775E2433BD7100639C26 /* GoogleService-Info.plist in Resources */,
 				372896F224338A3700F91BC7 /* Assets.xcassets in Resources */,
 				372896F024338A3500F91BC7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2ED614C481FD27E6967D75C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plant3r-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DFE33B51F20E32DCD50DBF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		372896E124338A3400F91BC7 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		372896FA24338A3700F91BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC4701746521BB76673C585 /* Pods-Plant3r.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +373,7 @@
 		};
 		372896FB24338A3700F91BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5F6B07C63258FF86A91BCB3 /* Pods-Plant3r.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
