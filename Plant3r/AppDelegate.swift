@@ -7,7 +7,7 @@
 //
 
 // Google Sheets API KEY = "AIzaSyAbGCKb_jYBD307gFXI5sVcqAeaQcGUMDY"
-// Google Sheets Client ID = "577252377971-756bnoh8r0f88esbl8fpjkmcn8srra95.apps.googleusercontent.com"
+// Google Sheets Client ID = "577252377971-756bnoh8r0f88esbl8fpjkmcn8srra95.apps.googleusercontent.com"	or "577252377971-756bnoh8r0f88esbl8fpjkmcn8srra95.apps.googleusercontent.com"
 
 // The client ID can always be accessed from Credentials in APIs & Services
 // OAuth is limited to 100 sensitive scope logins until the OAuth consent screen is published. This may require a verification process that can take several days.

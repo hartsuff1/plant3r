@@ -27,6 +27,7 @@
 		372896F424338A3700F91BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372896F624338A3700F91BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374C775D2433BD7100639C26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		374C775F2433D02B00639C26 /* ObjCBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridgingHeader.h; sourceTree = "<group>"; };
 		8BD702238B4419884A7908C6 /* libPods-Plant3r.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Plant3r.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5F6B07C63258FF86A91BCB3 /* Pods-Plant3r.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant3r.release.xcconfig"; path = "Target Support Files/Pods-Plant3r/Pods-Plant3r.release.xcconfig"; sourceTree = "<group>"; };
 		CEC4701746521BB76673C585 /* Pods-Plant3r.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant3r.debug.xcconfig"; path = "Target Support Files/Pods-Plant3r/Pods-Plant3r.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 				372896F324338A3700F91BC7 /* LaunchScreen.storyboard */,
 				374C775D2433BD7100639C26 /* GoogleService-Info.plist */,
 				372896F624338A3700F91BC7 /* Info.plist */,
+				374C775F2433D02B00639C26 /* ObjCBridgingHeader.h */,
 			);
 			path = Plant3r;
 			sourceTree = "<group>";
@@ -366,6 +368,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roohbear.Plant3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/ObjCBridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roohbear.Plant3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/ObjCBridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
