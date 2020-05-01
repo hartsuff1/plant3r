@@ -576,15 +576,6 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
  *  You can make more customized mocks by setting the test block property of a service
  *  or a query's execution parameters.  The test block can inspect the query as ticket.originalQuery
  *  to customize test behavior.
- *
- *  See the description of @c GTLRServiceTestBlock for more details on customized testing.
- *
- *  Example usage is in the unit test method @c testService_MockService_Succeeding
- *
- *  @param objectOrNil An object derived from GTLRObject to be passed to query completion handlers.
- *  @param error       An error to be passed to query completion handlers.
- *
- *  @return A mock instance of the service, suitable for unit testing.
  */
 + (instancetype)mockServiceWithFakedObject:(nullable id)object
                                 fakedError:(nullable NSError *)error;
