@@ -22,43 +22,59 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 	
 	let sheetID = "1SxHljprXomeMNmUoT1Yd_JW3CjdZ3-GW9kzGi-3DCls"
 	let range = "Plants per Container size!A2:B68"
-	var arrFoodKinds = [String]()
-	var arrFoodNamesOfSelectedFoodKind = [String]()
-	var chosenFoodKind = ""
-	var chosenFoodNameOfSelectedFoodKind = ""
+	var arrFoodKinds = [String]()						// values for the table on the left
+	var arrFoodNamesOfSelectedFoodKind = [String]()		// values for the table on the right
+	var chosenFoodKind = ""								// choice made on left table
+	var chosenFoodNameOfSelectedFoodKind = ""			// choice made on right table
 	var arrSheetValues:NSArray!
 	
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
 		
+		if let tfSize = self.textfieldSize {
+			tfSize.text = "144"
+		}
+	
+		self.callGoogleSheet("A2:B68") { (arrValues:NSArray) in
+			self.arrSheetValues = arrValues		// retain this while app is alive
+			self.arrFoodKinds.removeAll()
+
+			for value in arrValues {
+				if let kindAndName = value as? NSArray {
+					if let kind = kindAndName.firstObject as? String {
+						if self.arrFoodKinds.firstIndex(of:kind) == .none {
+							self.arrFoodKinds.append(kind)
+						}
+					}
+				}
+			}
+
+			// select the first food kind (on the main thread)
+			DispatchQueue.main.async {
+				self.tableFoodKind.reloadData()
+				self.tableFoodKind.selectRow(at:IndexPath.init(row:0, section:0), animated:false, scrollPosition:.top)
+			}
+		}
+	}
+	
+	// downloads the specified range of the Google Sheet and calls the completionBlock supplied with the result as an NSArray
+	// see https://fluffy.es/what-is-escaping-closure/ on the meaning of "@escaping"
+	func callGoogleSheet(_ cellRange:String, completionBlock:@escaping (_ arr:NSArray) -> ())
+	{
 		let service = GTLRSheetsService()
 		service.apiKey = "AIzaSyAbGCKb_jYBD307gFXI5sVcqAeaQcGUMDY"
 		
-		// NoFrills Bears sheet:
+		let range = "Plants per Container size!\(cellRange)"
 		let getValuesQuery = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId:sheetID, range:range)
 		service.executeQuery(getValuesQuery) { (ticket:GTLRServiceTicket, objects:Any?, err:Error?) in
-			
+			// if we get here, objects will contain whatever Google returned to us
 			if let gtlrObject = objects as? GTLRObject {
 				if let gtlrJSON = gtlrObject.json {
 					if let values = gtlrJSON["values"] {
 						if let arrValues = values as? NSArray {
-							self.arrSheetValues = arrValues		// retain this while app is alive
-							self.arrFoodKinds.removeAll()
-
-							for value in arrValues {
-								if let kindAndName = value as? NSArray {
-									if let kind = kindAndName.firstObject as? String {
-										if self.arrFoodKinds.firstIndex(of:kind) == .none {
-											self.arrFoodKinds.append(kind)
-										}
-									}
-								}
-							}
-
-							// select the first food kind
-							self.tableFoodKind.reloadData()
-							self.tableFoodKind.selectRow(at:IndexPath.init(row:0, section:0), animated:false, scrollPosition:.top)
+							// call the completion block with the results as an NSArray
+							completionBlock(arrValues)
 						}
 					}
 				}
@@ -68,7 +84,18 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 
 	@IBAction func buttonTellMeWhatICanPlantClicked(sender:UIButton)
 	{
-		
+		// take square footage entered by user and multiply it by 144
+		if let tfSize = self.textfieldSize {
+			if let tfSizeText = tfSize.text {
+				if let nSize = Int32(tfSizeText)  {
+					let area = nSize * 144
+					
+					
+				
+					print("X")
+				}
+			}
+		}
 	}
 
 	// MARK: - Google SignIn stuff (which isn't even necessary for this app)
