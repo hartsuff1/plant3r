@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/AWSLex/AWSLex.bundle
 ${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib
 ${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle

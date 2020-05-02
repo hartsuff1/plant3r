@@ -27,6 +27,10 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 	var chosenFoodKind = ""								// choice made on left table
 	var chosenFoodNameOfSelectedFoodKind = ""			// choice made on right table
 	var arrSheetValues:NSArray!
+	var sheetValueC4 = 0								// number of NC5 containers retrieved from the spreadsheet
+	var sheetValueD4 = 0								// number of NC10 containers retrieved from the spreadsheet
+	var sheetValueE4 = 0								// number of NC15 containers retrieved from the spreadsheet
+
 	
 	override func viewDidLoad()
 	{
@@ -55,6 +59,17 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 				self.tableFoodKind.reloadData()
 				self.tableFoodKind.selectRow(at:IndexPath.init(row:0, section:0), animated:false, scrollPosition:.top)
 			}
+		}
+
+		// get the values for C4, D4, and E4 from the spreadsheet (NC5, NC10, and NC15)
+		self.callGoogleSheet("C4:E4") { (arrValues:NSArray) in
+			print("got c4")
+		}
+		self.callGoogleSheet("D4:D4") { (arrValues:NSArray) in
+			print("got d4")
+		}
+		self.callGoogleSheet("E4:E4") { (arrValues:NSArray) in
+			print("got e4")
 		}
 	}
 	
@@ -90,7 +105,9 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 				if let nSize = Int32(tfSizeText)  {
 					let area = nSize * 144
 					
-					
+					let NC5 = area / 225
+					let NC10 = area / 400
+					let NC15 = area / 500
 				
 					print("X")
 				}

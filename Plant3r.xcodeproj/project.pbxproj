@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		370037F324375ABA003AE684 /* AppIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppIcon.jpg; sourceTree = "<group>"; };
+		370037F5245E01DB003AE684 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		372896E524338A3500F91BC7 /* Plant3r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plant3r.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372896E824338A3500F91BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372896EA24338A3500F91BC7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		372896E724338A3500F91BC7 /* Plant3r */ = {
 			isa = PBXGroup;
 			children = (
+				370037F5245E01DB003AE684 /* podfile */,
 				372896E824338A3500F91BC7 /* AppDelegate.swift */,
 				372896EA24338A3500F91BC7 /* SceneDelegate.swift */,
 				372896EC24338A3500F91BC7 /* ViewController.swift */,
