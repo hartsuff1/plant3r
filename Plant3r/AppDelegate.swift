@@ -15,12 +15,25 @@
 
 import UIKit
 
+// using Cocoapods for AWSCore, Cognito, and Lex proved to be too much trouble
+// so we're including the binaries of them straight from https://github.com/aws-amplify/aws-sdk-ios/releases
+import AWSCore
+import AWSCognito
+import AWSLex
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 	{
-		// Override point for customization after application launch.
+		// init AWS stuff so we can use the chatbot
+		let credentialProvider = AWSCognitoCredentialsProvider(regionType:.USEast1, identityPoolId:"us-east-1:40ad2f9e-4359-42f7-83da-8bc6d29b5e74")
+		let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialProvider)
+
+		AWSServiceManager.default().defaultServiceConfiguration = configuration
+		let chatConfig = AWSLexInteractionKitConfig.defaultInteractionKitConfig(withBotName:"Planter_one", botAlias: "Planter_one")
+		AWSLexInteractionKit.register(with: configuration!, interactionKitConfiguration: chatConfig, forKey: "chatConfig")
+		
 		return true
 	}
 

@@ -11,9 +11,8 @@
 // https://developers.google.com/sheets/api/guides/values
 
 import UIKit
-import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 	@IBOutlet var tableFoodKind:UITableView!
 	@IBOutlet var tableFoodName:UITableView!
@@ -113,46 +112,6 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate, 
 				}
 			}
 		}
-	}
-
-	// MARK: - Google SignIn stuff (which isn't even necessary for this app)
-	
-	// Called when SignIn button is clicked but this isn't even necessary.
-	// You don't need to sign in to query the Google Sheet.
-	@IBAction func buttonSignInClicked(sender:UIButton)
-	{
-		if let _ = GIDSignIn.sharedInstance()?.currentUser {
-			print("User is signed in")
-		}else{
-			print("User is not signed in")
-
-			// hides the keyboard (if any)
-			textfieldSize.resignFirstResponder()
-
-			// displays the Google Signin page
-			GIDSignIn.sharedInstance().delegate = self
-			GIDSignIn.sharedInstance().uiDelegate = self
-			GIDSignIn.sharedInstance().clientID = "577252377971-756bnoh8r0f88esbl8fpjkmcn8srra95.apps.googleusercontent.com"
-			GIDSignIn.sharedInstance().signIn()
-		}
-	}
-
-	func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!)
-	{
-		// hides the keyboard (if any)
-		textfieldSize.resignFirstResponder()
-
-		if (error == nil) {
-            // Perform any operations on signed in user here.
-			print("UserID = \(user.userID!)")
-			print("UserToken = \(user.authentication.idToken!)")
-			print("Full Name = \(user.profile.name!)")
-			print("Given name = \(user.profile.givenName!)")
-			print("Family name = \(user.profile.familyName!)")
-			print("Email = \(user.profile.email!)")
-		} else {
-            print("ERROR ::\(error.localizedDescription)")
-        }
 	}
 	
 	// MARK: - UITableViewDelegate and DataSource methods

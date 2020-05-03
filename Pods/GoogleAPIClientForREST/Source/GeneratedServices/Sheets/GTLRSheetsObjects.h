@@ -2231,7 +2231,26 @@ GTLR_EXTERN NSString * const kGTLRSheets_ValueRange_MajorDimension_Rows;
  *  and COLUMN are supported.
  *
  *  Likely values:
-
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Area An <a
+ *        href="/chart/interactive/docs/gallery/areachart">area chart</a>.
+ *        (Value: "AREA")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Bar A <a
+ *        href="/chart/interactive/docs/gallery/barchart">bar chart</a>. (Value:
+ *        "BAR")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_BasicChartTypeUnspecified
+ *        Default value, do not use. (Value: "BASIC_CHART_TYPE_UNSPECIFIED")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Column A <a
+ *        href="/chart/interactive/docs/gallery/columnchart">column chart</a>.
+ *        (Value: "COLUMN")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Combo A <a
+ *        href="/chart/interactive/docs/gallery/combochart">combo chart</a>.
+ *        (Value: "COMBO")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Line A <a
+ *        href="/chart/interactive/docs/gallery/linechart">line chart</a>.
+ *        (Value: "LINE")
+ *    @arg @c kGTLRSheets_BasicChartSeries_Type_Scatter A <a
+ *        href="/chart/interactive/docs/gallery/scatterchart">scatter chart</a>.
+ *        (Value: "SCATTER")
  */
 @property(nonatomic, copy, nullable) NSString *type;
 
@@ -2251,7 +2270,26 @@ GTLR_EXTERN NSString * const kGTLRSheets_ValueRange_MajorDimension_Rows;
  *  The type of the chart.
  *
  *  Likely values:
- 
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Area An <a
+ *        href="/chart/interactive/docs/gallery/areachart">area chart</a>.
+ *        (Value: "AREA")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Bar A <a
+ *        href="/chart/interactive/docs/gallery/barchart">bar chart</a>. (Value:
+ *        "BAR")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_BasicChartTypeUnspecified
+ *        Default value, do not use. (Value: "BASIC_CHART_TYPE_UNSPECIFIED")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Column A <a
+ *        href="/chart/interactive/docs/gallery/columnchart">column chart</a>.
+ *        (Value: "COLUMN")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Combo A <a
+ *        href="/chart/interactive/docs/gallery/combochart">combo chart</a>.
+ *        (Value: "COMBO")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Line A <a
+ *        href="/chart/interactive/docs/gallery/linechart">line chart</a>.
+ *        (Value: "LINE")
+ *    @arg @c kGTLRSheets_BasicChartSpec_ChartType_Scatter A <a
+ *        href="/chart/interactive/docs/gallery/scatterchart">scatter chart</a>.
+ *        (Value: "SCATTER")
  */
 @property(nonatomic, copy, nullable) NSString *chartType;
 
