@@ -11,13 +11,17 @@
 // https://developers.google.com/sheets/api/guides/values
 
 import UIKit
+import AWSLex
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AWSLexInteractionDelegate, UITextFieldDelegate
 {
 	@IBOutlet var tableFoodKind:UITableView!
 	@IBOutlet var tableFoodName:UITableView!
 	@IBOutlet var textfieldSize:UITextField!
 	@IBOutlet var buttonTellMeWhatICanPlant:UIButton!
+	@IBOutlet var textfieldChatbotQuestion:UITextField!
+	@IBOutlet var labelChatbotReply:UILabel!
+	var interactionKit: AWSLexInteractionKit?
 	
 	let sheetID = "1SxHljprXomeMNmUoT1Yd_JW3CjdZ3-GW9kzGi-3DCls"
 	let range = "Plants per Container size!A2:B68"
@@ -38,6 +42,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		if let tfSize = self.textfieldSize {
 			tfSize.text = "144"
 		}
+		
+		// setup AWS Lex
+		self.interactionKit = AWSLexInteractionKit.init(forKey:"chatConfig")
+		self.interactionKit?.interactionDelegate = self
 	
 		self.callGoogleSheet("A2:B68") { (arrValues:NSArray) in
 			self.arrSheetValues = arrValues		// retain this while app is alive
@@ -180,6 +188,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		}
 		if tableView == tableFoodName {
 
+		}
+	}
+	
+	// MARK: - AWS Lex delegate methods
+	
+	func interactionKit(_ interactionKit: AWSLexInteractionKit, onError error: Error)
+	{
+		print("interactionKit error: \(error)")
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool
+	{
+		textField.resignFirstResponder()
+		if  (textfieldChatbotQuestion.text?.count)! > 0 {
+			self.interactionKit?.text(inTextOut:textfieldChatbotQuestion.text!, sessionAttributes: nil)
+		}
+		return true
+	}
+	
+	func interactionKit(_ interactionKit: AWSLexInteractionKit, switchModeInput: AWSLexSwitchModeInput, completionSource: AWSTaskCompletionSource<AWSLexSwitchModeResponse>?)
+	{
+		guard let response = switchModeInput.outputText else {
+			let response = "No reply from bot"
+			print("Response: \(response)")
+			return
+		}
+	
+		//show response on screen
+		DispatchQueue.main.async{
+			self.labelChatbotReply.text = response
 		}
 	}
 }
