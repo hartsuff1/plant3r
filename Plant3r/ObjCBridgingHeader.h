@@ -10,5 +10,8 @@
 #define ObjCBridgingHeader_h
 
 #import "GTLRSheets.h"
+#import "AWSCore.h"
+#import "AWSLex.h"
+#import "AWSCognito.h"
 
 #endif /* ObjCBridgingHeader_h */

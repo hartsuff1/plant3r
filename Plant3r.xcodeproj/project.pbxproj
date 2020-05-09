@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		118CA46691F6AC9DF2F9A01D /* libPods-Plant3r.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0B086D013231C0BE70BAA6 /* libPods-Plant3r.a */; };
+		276EA9FF24639329009F30F3 /* libAWSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 276EA9FE24639329009F30F3 /* libAWSCore.a */; };
 		370037F424375ABA003AE684 /* AppIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 370037F324375ABA003AE684 /* AppIcon.jpg */; };
 		372896E924338A3500F91BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372896E824338A3500F91BC7 /* AppDelegate.swift */; };
 		372896EB24338A3500F91BC7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372896EA24338A3500F91BC7 /* SceneDelegate.swift */; };
@@ -15,25 +16,16 @@
 		372896F024338A3500F91BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372896EE24338A3500F91BC7 /* Main.storyboard */; };
 		372896F224338A3700F91BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372896F124338A3700F91BC7 /* Assets.xcassets */; };
 		372896F524338A3700F91BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372896F324338A3700F91BC7 /* LaunchScreen.storyboard */; };
-		37304B5C245E5231007F5FA0 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B56245E3E87007F5FA0 /* AWSCognito.framework */; };
-		37304B5D245E5231007F5FA0 /* AWSCognito.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B56245E3E87007F5FA0 /* AWSCognito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		37304B5F245E5232007F5FA0 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B58245E3EA1007F5FA0 /* AWSCore.framework */; };
-		37304B60245E5232007F5FA0 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B58245E3EA1007F5FA0 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		37304B61245E5234007F5FA0 /* AWSLex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B5A245E3EAE007F5FA0 /* AWSLex.framework */; };
-		37304B62245E5234007F5FA0 /* AWSLex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37304B5A245E3EAE007F5FA0 /* AWSLex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		374C775E2433BD7100639C26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 374C775D2433BD7100639C26 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		37304B5E245E5231007F5FA0 /* Embed Frameworks */ = {
+		276EA9E524625442009F30F3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37304B62245E5234007F5FA0 /* AWSLex.framework in Embed Frameworks */,
-				37304B5D245E5231007F5FA0 /* AWSCognito.framework in Embed Frameworks */,
-				37304B60245E5232007F5FA0 /* AWSCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		0C0D0CF41DB0904DCBEA6C0A /* Pods-Plant3r.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plant3r.release.xcconfig"; path = "Target Support Files/Pods-Plant3r/Pods-Plant3r.release.xcconfig"; sourceTree = "<group>"; };
+		276EA9F824638D02009F30F3 /* libAWSCognito.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAWSCognito.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EA9FA24638D04009F30F3 /* libAWSCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAWSCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EA9FC24638D07009F30F3 /* libAWSLex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAWSLex.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		276EA9FE24639329009F30F3 /* libAWSCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAWSCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		370037F324375ABA003AE684 /* AppIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppIcon.jpg; sourceTree = "<group>"; };
 		370037F5245E01DB003AE684 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		372896E524338A3500F91BC7 /* Plant3r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plant3r.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,9 +48,6 @@
 		372896F124338A3700F91BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372896F424338A3700F91BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372896F624338A3700F91BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37304B56245E3E87007F5FA0 /* AWSCognito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCognito.framework; sourceTree = "<group>"; };
-		37304B58245E3EA1007F5FA0 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
-		37304B5A245E3EAE007F5FA0 /* AWSLex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLex.framework; sourceTree = "<group>"; };
 		374C775D2433BD7100639C26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		374C775F2433D02B00639C26 /* ObjCBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridgingHeader.h; sourceTree = "<group>"; };
 		6C0B086D013231C0BE70BAA6 /* libPods-Plant3r.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Plant3r.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,10 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37304B61245E5234007F5FA0 /* AWSLex.framework in Frameworks */,
-				37304B5F245E5232007F5FA0 /* AWSCore.framework in Frameworks */,
+				276EA9FF24639329009F30F3 /* libAWSCore.a in Frameworks */,
 				118CA46691F6AC9DF2F9A01D /* libPods-Plant3r.a in Frameworks */,
-				37304B5C245E5231007F5FA0 /* AWSCognito.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +70,11 @@
 		0A220A88652AB62D25775112 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37304B5A245E3EAE007F5FA0 /* AWSLex.framework */,
-				37304B58245E3EA1007F5FA0 /* AWSCore.framework */,
-				37304B56245E3E87007F5FA0 /* AWSCognito.framework */,
+				276EA9FE24639329009F30F3 /* libAWSCore.a */,
 				6C0B086D013231C0BE70BAA6 /* libPods-Plant3r.a */,
+				276EA9FC24638D07009F30F3 /* libAWSLex.a */,
+				276EA9FA24638D04009F30F3 /* libAWSCore.a */,
+				276EA9F824638D02009F30F3 /* libAWSCognito.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,7 +135,9 @@
 				372896E124338A3400F91BC7 /* Sources */,
 				372896E224338A3400F91BC7 /* Frameworks */,
 				372896E324338A3400F91BC7 /* Resources */,
-				37304B5E245E5231007F5FA0 /* Embed Frameworks */,
+				276EA9E524625442009F30F3 /* Embed Frameworks */,
+				276EA9F724625E4A009F30F3 /* ShellScript */,
+				34E1178DB508F951B03C3D80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +197,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		276EA9F724625E4A009F30F3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		34E1178DB508F951B03C3D80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plant3r/Pods-Plant3r-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		788AB071B170E4164126A1B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,7 +408,9 @@
 			baseConfigurationReference = D11D7E273808120F12C093E1 /* Pods-Plant3r.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = KA8LXKVMVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roohbear.Plant3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Plant3r dist";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/ObjCBridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -404,7 +436,9 @@
 			baseConfigurationReference = 0C0D0CF41DB0904DCBEA6C0A /* Pods-Plant3r.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = KA8LXKVMVF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.roohbear.Plant3r;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Plant3r dist";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT)/ObjCBridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

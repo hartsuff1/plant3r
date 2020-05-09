@@ -1,4 +1,9 @@
 PODS:
+  - AWSCognito (2.13.3):
+    - AWSCore (= 2.13.3)
+  - AWSCore (2.13.3)
+  - AWSLex (2.13.3):
+    - AWSCore (= 2.13.3)
   - GoogleAPIClientForREST/Core (1.2.1):
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleAPIClientForREST/Sheets (1.2.1):
@@ -11,17 +16,26 @@ PODS:
     - GTMSessionFetcher/Core (= 1.4.0)
 
 DEPENDENCIES:
+  - AWSCognito
+  - AWSCore
+  - AWSLex
   - GoogleAPIClientForREST/Sheets (~> 1.2.1)
 
 SPEC REPOS:
   trunk:
+    - AWSCognito
+    - AWSCore
+    - AWSLex
     - GoogleAPIClientForREST
     - GTMSessionFetcher
 
 SPEC CHECKSUMS:
+  AWSCognito: 8a01f6a76e906e5ad6b8837ab07f5d5d0496623f
+  AWSCore: fc361166b595e3c0183c55987743b295646c39d2
+  AWSLex: f249cd333bf8665b60b06c77382826a0eb469477
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
 
-PODFILE CHECKSUM: 9737f529a2f3d737d66ae54eba5e1b6517eecf99
+PODFILE CHECKSUM: 5e9540a5d9534a6d2577fc22f160ae18e80ae0d0
 
 COCOAPODS: 1.8.4

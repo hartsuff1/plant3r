@@ -11,7 +11,6 @@
 // https://developers.google.com/sheets/api/guides/values
 
 import UIKit
-import AWSLex
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AWSLexInteractionDelegate, UITextFieldDelegate
 {
@@ -65,7 +64,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 			DispatchQueue.main.async {
 				self.tableFoodKind.reloadData()
 				self.tableFoodKind.selectRow(at:IndexPath.init(row:0, section:0), animated:false, scrollPosition:.top)
-			}
+
+                self.tableView(self.tableFoodKind, didSelectRowAt:IndexPath.init(row:0, section:0))
+            }
 		}
 
 		// get the values for C4, D4, and E4 from the spreadsheet (NC5, NC10, and NC15)
@@ -106,6 +107,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 	@IBAction func buttonTellMeWhatICanPlantClicked(sender:UIButton)
 	{
+        let alertVC = UIAlertController.init(title:"Plant3r", message:"This feature not yet implemented. Please just try using the ChatBot for now. Thanks", preferredStyle:.alert)
+        let okButton = UIAlertAction.init(title:"Ok", style:.destructive, handler:nil)
+        
+        alertVC.addAction(okButton)
+        self.present(alertVC, animated:true, completion:nil)
+        return
+        
 		// take square footage entered by user and multiply it by 144
 		if let tfSize = self.textfieldSize {
 			if let tfSizeText = tfSize.text {

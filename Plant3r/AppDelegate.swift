@@ -18,9 +18,9 @@ import UIKit
 // Using Cocoapods for AWSCore, Cognito, and Lex proved to be too much trouble
 // so we're including the binaries of them straight from https://github.com/aws-amplify/aws-sdk-ios/releases
 // Also, instructions on how to add the Chatbot are here: https://medium.com/libertyit/how-to-build-an-aws-lex-chatbot-for-an-ios-app-9fd7693353b
-import AWSCore
-import AWSCognito
-import AWSLex
+//import AWSCore        awscore.h included in ObjCBridgingHeader.h instead
+//import AWSCognito     awscognito.h included in ObjCBridgingHeader.h instead
+//import AWSLex         awslex.h included in ObjCBridgingHeader.h instead
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
